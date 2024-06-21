@@ -1,0 +1,50 @@
+---
+import { Image } from 'astro:assets';
+
+const buttons = [
+  {
+    label: 'descargar app',
+    icon: 'playStore',
+    color: 'bg-green-400',
+    href: '#',
+  },
+  {
+    label: 'descargar app',
+    icon: 'appStore',
+    color: 'bg-blue-400',
+    href: '#',
+  },
+];
+---
+
+<section>
+  {
+    buttons.map((button) => (
+      <a href={button.href} class={`button ${button.color}`}>
+        <Image
+          src={`/svg/${button.icon}.svg`}
+          alt={button.icon}
+          class='icon'
+          width={100}
+          height={100}
+        />
+
+        {button.label}
+      </a>
+    ))
+  }
+</section>
+
+<style>
+  section {
+    @apply flex justify-end items-center space-x-3 mt-5;
+  }
+
+  a {
+    @apply rounded-md text-wild-sand-950 flex justify-center items-center px-4 py-3 font-bold capitalize text-xl;
+  }
+
+  .icon {
+    @apply w-8 h-8 mr-2;
+  }
+</style>

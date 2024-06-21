@@ -1,0 +1,40 @@
+---
+import Title from '../components/Title.astro';
+import Preview from '../components/Preview.astro';
+import DefaultLayout from '../layouts/DefaultLayout.astro';
+import Description from '../components/Description.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<DefaultLayout title='ayuda concho'>
+  <div class='container-section'>
+    <section class='section-1'>
+      <Title />
+      <Description />
+      
+      <Footer />
+    </section>
+
+    <section class='section-2'>
+      <Preview />
+    </section>
+  </div>
+</DefaultLayout>
+
+<style>
+  body {
+    @apply flex justify-center items-center h-screen bg-triangule bg-no-repeat bg-left-bottom bg-fixed;
+  }
+
+  .container-section {
+    @apply grid grid-cols-3;
+  }
+
+  .section-1 {
+    @apply col-span-2;
+  }
+
+  .section-2 {
+    @apply col-span-1;
+  }
+</style>

@@ -1,0 +1,37 @@
+---
+const options = [
+  {
+    label: 'politica de privacidad',
+    href: '/politica-de-privacidad',
+  },
+];
+---
+
+<footer>
+  <nav>
+    <ul>
+      {
+        options.map((option) => (
+          <li class='footer-option'>
+            <a href={option.href}>{option.label}</a>
+          </li>
+        ))
+      }
+      <li>© 2021 - {new Date().getFullYear()} - Todos los derechos reservados</li>
+    </ul>
+  </nav>
+</footer>
+
+<style>
+  footer {
+    @apply text-wild-sand-950 flex justify-end p-4 absolute bottom-0 w-full text-sm;
+  }
+
+  ul {
+    @apply flex space-x-4;
+  }
+
+  .footer-option {
+    @apply hover:underline;
+  }
+</style>

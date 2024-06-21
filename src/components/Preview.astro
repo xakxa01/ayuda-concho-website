@@ -1,0 +1,24 @@
+---
+import { Image } from 'astro:assets';
+
+const imageInfo = {
+  alt: 'preview',
+  size: 300,
+};
+---
+
+<div class='container'>
+  <Image
+    src='/images/phone-preview.png'
+    alt={imageInfo.alt}
+    height={imageInfo.size}
+    width={imageInfo.size}
+    draggable={false}
+  />
+</div>
+
+<style>
+  .container {
+    @apply flex justify-center items-center w-full h-full m-auto py-5;
+  }
+</style>

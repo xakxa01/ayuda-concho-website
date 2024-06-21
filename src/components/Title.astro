@@ -1,0 +1,26 @@
+---
+import { Image } from 'astro:assets';
+const logoSize = 130;
+---
+
+<div class='container'>
+  <Image src='/images/logo.png' alt='logo' width={logoSize} height={logoSize} class='logo' />
+  <h1 class='title'>
+    <span>ayuda</span>
+    <span>concho</span>
+  </h1>
+</div>
+
+<style>
+  .container {
+    @apply flex  items-center space-x-3 justify-center;
+  }
+
+  .title {
+    @apply font-medium text-6xl text-wild-sand-700 flex space-x-4 capitalize;
+  }
+
+  /* .logo {
+
+  } */
+</style>
