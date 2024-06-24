@@ -11,23 +11,29 @@ import Footer from '../components/Footer.astro';
     <section class='section-1'>
       <Title />
       <Description />
-      
-      <Footer />
+
+      <div class='md:hidden block'>
+        <Footer />
+      </div>
     </section>
 
     <section class='section-2'>
       <Preview />
+
+      <div class='hidden md:block'>
+        <Footer />
+      </div>
     </section>
   </div>
 </DefaultLayout>
 
 <style>
   body {
-    @apply flex justify-center items-center h-screen bg-triangule bg-no-repeat bg-left-bottom bg-fixed;
+    @apply flex justify-center items-center h-screen bg-triangule bg-no-repeat bg-left-bottom bg-fixed md:block md:bg-contain;
   }
 
   .container-section {
-    @apply grid grid-cols-3;
+    @apply grid grid-cols-3 md:block;
   }
 
   .section-1 {

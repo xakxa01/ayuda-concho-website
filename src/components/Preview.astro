@@ -8,17 +8,22 @@ const imageInfo = {
 ---
 
 <div class='container'>
-  <Image
+  <div class="preview" />
+  <!-- <Image
     src='/images/phone-preview.png'
     alt={imageInfo.alt}
     height={imageInfo.size}
     width={imageInfo.size}
     draggable={false}
-  />
+  /> -->
 </div>
 
 <style>
   .container {
-    @apply flex justify-center items-center w-full h-full m-auto py-5;
+    @apply flex justify-center items-center w-full h-full m-auto py-5; 
+  }
+
+  .preview {
+    @apply bg-phone-preview w-full bg-no-repeat bg-contain h-[45rem] bg-center md:bg-responsive-phone-preview
   }
 </style>

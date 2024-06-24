@@ -3,6 +3,10 @@ export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
 		extend: {
+			fontFamily: {
+				inter: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', 'sans-serif', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'],
+				roboto: ['Roboto', 'Arial', 'Noto Sans', 'sans-serif', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol']
+			},
 			colors: {
 				'carnation': {
 					'50': '#fff1f1',
@@ -33,8 +37,26 @@ export default {
 			},
 			backgroundImage: {
 				'triangule': 'url("./svg/triangle.svg")',
+				'responsive-phone-preview': 'url("./images/phone-preview-responsive.png")',
+				'phone-preview': 'url("./images/phone-preview.png")'
 			}
 		},
+		screens: {
+			'2xl': { 'max': '1535px' },
+			// => @media (max-width: 1535px) { ... }
+
+			'xl': { 'max': '1279px' },
+			// => @media (max-width: 1279px) { ... }
+
+			'lg': { 'max': '1023px' },
+			// => @media (max-width: 1023px) { ... }
+
+			'md': { 'max': '767px' },
+			// => @media (max-width: 767px) { ... }
+
+			'sm': { 'max': '639px' },
+			// => @media (max-width: 639px) { ... }
+		}
 	},
 	plugins: [],
 }
