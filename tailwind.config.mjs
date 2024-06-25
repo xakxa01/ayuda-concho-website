@@ -32,7 +32,7 @@ export default {
 				},
 			},
 			backgroundImage: {
-				'triangule': 'url("./svg/triangle.svg")',
+				// 'triangule': 'url("./svg/triangle.svg")',
 				'responsive-phone-preview': 'url("./images/phone-preview-responsive.png")',
 				'phone-preview': 'url("./images/phone-preview.png")'
 			}
